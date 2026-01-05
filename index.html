@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Diário de Treinos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Meu Diário de Treinos</h1>
+        <p>Organize seus treinos diários e mantenha-se em forma!</p>
+    </header>
+
+    <main>
+        <div class="tabs">
+            <button class="tab-button active" onclick="showDay('segunda')">Segunda</button>
+            <button class="tab-button" onclick="showDay('terca')">Terça</button>
+            <button class="tab-button" onclick="showDay('quarta')">Quarta</button>
+            <button class="tab-button" onclick="showDay('quinta')">Quinta</button>
+            <button class="tab-button" onclick="showDay('sexta')">Sexta</button>
+            <button class="tab-button" onclick="showDay('sabado')">Sábado</button>
+            <button class="tab-button" onclick="showDay('domingo')">Domingo</button>
+        </div>
+
+        <div id="segunda" class="day-content active">
+            <h2>Treino de Segunda-feira</h2>
+            <div class="exercise-card">
+                <h3>Agachamento Livre</h3>
+                <video src="videos/agachamento.mp4" controls loop muted></video>
+                <p>3 séries de 10-12 repetições. Descanse 60 segundos.</p>
+                <button class="edit-button" data-day="segunda" data-exercise="agachamento">Editar</button>
+            </div>
+            <div class="exercise-card">
+                <h3>Supino Reto com Barra</h3>
+                <video src="videos/supino.mp4" controls loop muted></video>
+                <p>4 séries de 8-10 repetições. Descanse 90 segundos.</p>
+                <button class="edit-button" data-day="segunda" data-exercise="supino">Editar</button>
+            </div>
+            <button class="add-exercise-button" data-day="segunda">Adicionar Exercício</button>
+        </div>
+
+        <div id="terca" class="day-content">
+            <h2>Treino de Terça-feira</h2>
+            <div class="exercise-card">
+                <h3>Remada Curvada</h3>
+                <video src="videos/remada.mp4" controls loop muted></video>
+                <p>3 séries de 10-12 repetições. Descanse 60 segundos.</p>
+                <button class="edit-button" data-day="terca" data-exercise="remada">Editar</button>
+            </div>
+            <button class="add-exercise-button" data-day="terca">Adicionar Exercício</button>
+        </div>
+
+        <div id="quarta" class="day-content">
+            <h2>Treino de Quarta-feira</h2>
+            <p>Nenhum treino agendado para hoje. Clique em "Adicionar Exercício" para começar!</p>
+            <button class="add-exercise-button" data-day="quarta">Adicionar Exercício</button>
+        </div>
+
+        <div id="quinta" class="day-content">
+            <h2>Treino de Quinta-feira</h2>
+            <p>Nenhum treino agendado para hoje. Clique em "Adicionar Exercício" para começar!</p>
+            <button class="add-exercise-button" data-day="quinta">Adicionar Exercício</button>
+        </div>
+
+        <div id="sexta" class="day-content">
+            <h2>Treino de Sexta-feira</h2>
+            <p>Nenhum treino agendado para hoje. Clique em "Adicionar Exercício" para começar!</p>
+            <button class="add-exercise-button" data-day="sexta">Adicionar Exercício</button>
+        </div>
+
+        <div id="sabado" class="day-content">
+            <h2>Treino de Sábado</h2>
+            <p>Nenhum treino agendado para hoje. Clique em "Adicionar Exercício" para começar!</p>
+            <button class="add-exercise-button" data-day="sabado">Adicionar Exercício</button>
+        </div>
+
+        <div id="domingo" class="day-content">
+            <h2>Treino de Domingo</h2>
+            <p>Nenhum treino agendado para hoje. Clique em "Adicionar Exercício" para começar!</p>
+            <button class="add-exercise-button" data-day="domingo">Adicionar Exercício</button>
+        </div>
+
+
+    </main>
+
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Editar Exercício</h2>
+            <label for="exercise-title">Título:</label>
+            <input type="text" id="exercise-title">
+            <label for="exercise-video-src">Link do Vídeo (MP4):</label>
+            <input type="text" id="exercise-video-src">
+            <label for="exercise-description">Descrição:</label>
+            <textarea id="exercise-description"></textarea>
+            <button id="save-edit-button">Salvar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
