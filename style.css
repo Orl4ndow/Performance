@@ -2,8 +2,8 @@
     --primary-color: #000000; /* Verde */
     --secondary-color: #f44336; /* Vermelho */
     --text-color: #333;
-    --bg-color: #ddd;
-    --card-bg-color: #f0f2f5;
+    --bg-color: #ffffff;
+    --card-bg-color: #ffffff;
     --border-color: #ffffff;
 }
 
@@ -93,7 +93,7 @@ main {
 }
 
 .exercise-card {
-    background-color: #c92828;
+    background-color: #f9f9f9;
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 1rem;
