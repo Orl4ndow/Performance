@@ -93,7 +93,7 @@ main {
 }
 
 .exercise-card {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 1rem;
